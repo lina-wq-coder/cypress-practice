@@ -1,8 +1,8 @@
 
-describe('Тестирование главной гугла', function () {
-   it('Проверка, что при поиске теслы в выдаче есть тесла', function () {
-        cy.visit('https://google.com');
-        cy.get("input[type='text']").type('tesla').type('{enter}');
-        cy.contains('https://www.tesla.com');
+describe('Тестирование главной Википедии', function () {
+   it('Проверка, что при поиске Москвы в выдаче есть информация о столице', function () {
+        cy.visit('https://ru.wikipedia.org/wiki/');
+        cy.get("#searchInput").type('Москва').type('{enter}');
+        cy.contains('столица России');
     })
 })
